@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TableViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <TableView fx:id="table" maxWidth="425.0" BorderPane.alignment="CENTER" editable="true">
+            <columns>
+                <TableColumn fx:id="hourCol" text="Hour">
+                    <cellValueFactory><PropertyValueFactory property="hour" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="priceCol" text="Price (USD)">
+                    <cellValueFactory><PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

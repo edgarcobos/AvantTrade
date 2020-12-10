@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane  fx:id="pane" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Add">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Table View" onAction="#addTableView"/>
+                                <MenuItem mnemonicParsing="false" text="My Quotes" onAction="#addMyQuotes"/>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Delete">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Table View" onAction="#removeTableView"/>
+                                <MenuItem mnemonicParsing="false" text="My Quotes" onAction="#removeMyQuotes"/>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" onAction="#displayAbout"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <fx:include source="quotes.fxml"/>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

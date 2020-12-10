@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuotesViewController" stylesheets="@application.css">
+   <center>
+       <LineChart fx:id="lineChart" minHeight="200">
+           <xAxis>
+               <NumberAxis fx:id="xAxis" side="BOTTOM" />
+           </xAxis>
+           <yAxis>
+               <NumberAxis fx:id="yAxis" side="RIGHT" />
+           </yAxis>
+       </LineChart>
+   </center>
+</BorderPane>
