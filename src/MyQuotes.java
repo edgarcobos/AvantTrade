@@ -76,13 +76,13 @@ public class MyQuotes extends BorderPane {
     public Color getColor(Double change) {
         Color color = Color.DARKSLATEGRAY;
         if(change >= 3) {
-            color = Color.DARKGREEN;
+            color = Color.LIMEGREEN;
         }
         else if(change >= 2) {
             color = Color.FORESTGREEN;
         }
         else if(change >= 1) {
-            color = Color.LIMEGREEN;
+            color = Color.DARKGREEN;
         }
         else if(change <= -1) {
             color = Color.MAROON;

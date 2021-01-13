@@ -7,6 +7,6 @@
             prefHeight="400.0" prefWidth="600.0"
             style="-fx-background-color: dodgerblue">
     <Label style="-fx-font-size: 30; -fx-text-fill: white">
-        Avant Trade
+        AvantTrade
     </Label>
 </StackPane>

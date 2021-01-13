@@ -30,7 +30,7 @@ public class Controller {
 
         Image logoImg = new Image(getClass().getClassLoader().getResourceAsStream("images/bluecoin.png"));
 
-        Label app = new Label("Avant Trade");
+        Label app = new Label("AvantTrade");
         app.setFont(new Font(20));
 
         Font font = new Font(14);
@@ -63,25 +63,31 @@ public class Controller {
 
     @FXML
     public void addTableView() throws IOException {
-        root = FXMLLoader.load(getClass().getResource("TableView.fxml"));
-        vBox.setMargin(root, new Insets(5,0,10,0));
-        vBox.getChildren().add(root);
+        if (root == null) {
+            root = FXMLLoader.load(getClass().getResource("TableView.fxml"));
+            vBox.setMargin(root, new Insets(5, 0, 10, 0));
+            vBox.getChildren().add(root);
+        }
     }
 
     @FXML
     public void removeTableView() throws IOException {
         vBox.getChildren().remove(root);
+        root = null;
     }
 
     @FXML
     public void addMyQuotes() {
-        root2 = new MyQuotes();
-        vBox.setMargin(root2, new Insets(5,0,10,0));
-        vBox.getChildren().add(root2);
+        if (root2 == null) {
+            root2 = new MyQuotes();
+            vBox.setMargin(root2, new Insets(5,0,10,0));
+            vBox.getChildren().add(root2);
+        }
     }
 
     @FXML
     public void removeMyQuotes() {
         vBox.getChildren().remove(root2);
+        root2 = null;
     }
 }

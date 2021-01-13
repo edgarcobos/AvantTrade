@@ -26,7 +26,7 @@ public class Main extends Application {
 
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-            primaryStage.setTitle("Avant Trade");
+            primaryStage.setTitle("AvantTrade");
             primaryStage.setScene(new Scene(root, 450, 600));
 
             loadSplashScreen(primaryStage);
